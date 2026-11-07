@@ -1,0 +1,642 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F8F0E6;
+    color: #665365;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+/* CABEÇALHO */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+
+    background-color: #F8F0E6;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #665365;
+}
+
+.logo span {
+    color: #B58B78;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #665365;
+    font-size: 15px;
+
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #B58B78;
+}
+
+
+/* PRIMEIRA FAIXA - HERO */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+    padding: 70px 8%;
+
+    background-color: #F3E8E8;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.subtitle {
+    color: #A17C86;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    line-height: 1.2;
+
+    margin: 20px 0;
+
+    color: #665365;
+}
+
+.hero h1 span {
+    color: #A17C86;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #766A70;
+
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+
+    background-color: #A17C86;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #665365;
+    transform: translateY(-3px);
+}
+
+
+/* IMAGEM PRINCIPAL */
+
+.hero-image {
+    flex: 1;
+    max-width: 480px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 45% 45% 20px 20px;
+
+    border: 8px solid #F8F0E6;
+}
+
+
+/* DECORAÇÕES */
+
+.decoration {
+    position: absolute;
+    color: #B58B78;
+    font-size: 35px;
+}
+
+.star-one {
+    top: 50px;
+    right: 10%;
+}
+
+.star-two {
+    bottom: 40px;
+    left: 45%;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 55px 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+}
+
+/* SEGUNDA FAIXA - PRODUTOS */
+
+.products {
+    padding: 80px 8%;
+    background-color: #F8F0E6;
+}
+
+
+/* TÍTULO DA SEÇÃO */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #665365;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #766A70;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* CONTAINER DOS PRODUTOS */
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+/* CARDS */
+
+.product-card {
+    background-color: #FFFFFF;
+
+    width: 250px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(102, 83, 101, 0.08);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(102, 83, 101, 0.15);
+}
+
+
+/* IMAGENS DOS PRODUTOS */
+
+.product-card img {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+}
+
+/* INFORMAÇÕES DOS PRODUTOS */
+
+.product-info {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    color: #665365;
+
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #766A70;
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #A17C86;
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* BOTÃO DOS PRODUTOS */
+
+.product-button {
+    display: inline-block;
+
+    background-color: #A8B59A;
+    color: white;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+
+    text-decoration: none;
+    font-size: 12px;
+
+    transition: background-color 0.3s;
+}
+
+.product-button:hover {
+    background-color: #829477;
+}
+
+/* RESPONSIVIDADE DOS PRODUTOS */
+
+@media (max-width: 768px) {
+
+    .products {
+        padding: 60px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .products-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product-card {
+        width: calc(50% - 10px);
+        min-width: 145px;
+    }
+
+    .product-card img {
+        height: 160px;
+    }
+
+    .product-info {
+        padding: 14px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .product-button {
+        font-size: 11px;
+        padding: 9px 12px;
+    }
+
+}
+/* TERCEIRA FAIXA - SOBRE O ATELIÊ */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+    padding: 90px 8%;
+
+    background-color: #F3E8E8;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 20px 80px 20px 80px;
+
+    border: 8px solid #F8F0E6;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2,
+.custom-content h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.3;
+
+    color: #665365;
+
+    margin: 20px 0;
+}
+
+.about-content p,
+.custom-content p {
+    color: #766A70;
+    font-size: 15px;
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+.about-signature {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #A17C86;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+
+/* QUARTA FAIXA - PERSONALIZAÇÃO */
+
+.custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+    padding: 90px 8%;
+
+    background-color: #F8F0E6;
+}
+
+.custom-content {
+    flex: 1;
+}
+
+.custom-image {
+    flex: 1;
+}
+
+.custom-image img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 80px 20px 80px 20px;
+
+    border: 8px solid #F3E8E8;
+}
+/* QUINTA FAIXA - NOSSOS DIFERENCIAIS */
+.benefits {
+    padding: 80px 8%;
+    background-color: #F3E8E8;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.benefit-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 260px;
+    padding: 30px 22px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(102, 83, 101, 0.07);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-7px);
+}
+
+.benefit-icon {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.benefit-card h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #665365;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: #766A70;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVIDADE - DIFERENCIAIS */
+@media (max-width: 768px) {
+    .benefits {
+        padding: 60px 20px;
+    }
+
+    .benefits-container {
+        gap: 15px;
+    }
+
+    .benefit-card {
+        min-width: 140px;
+        padding: 25px 15px;
+    }
+}
+/* SEXTA FAIXA - CONTATO */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 90px 8%;
+    background-color: #F8F0E6;
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-content h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    line-height: 1.3;
+    color: #665365;
+    margin: 20px 0;
+}
+
+.contact-content p {
+    color: #766A70;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.contact-note {
+    margin-top: 25px;
+    color: #A17C86;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(102, 83, 101, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #665365;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #E5D7D9;
+    border-radius: 12px;
+    background-color: #FDF9F5;
+    color: #665365;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #A17C86;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* RESPONSIVIDADE - CONTATO */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 25px;
+        gap: 35px;
+    }
+
+    .contact-content h2 {
+        font-size: 30px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 25px 20px;
+    }
+}
